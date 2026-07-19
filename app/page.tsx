@@ -9,33 +9,35 @@ export default function Home() {
   return (
     <main className="bg-black text-white">
 
-      {/* ================= TOP CONTACT BAR ================= */}
+     {/* ================= TOP CONTACT BAR ================= */}
 
 <div className="bg-yellow-500 text-black">
-  <div className="max-w-7xl mx-auto px-4 py-2 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs sm:text-sm font-semibold">
+
+  <div className="max-w-7xl mx-auto px-3 py-4 flex items-center justify-center gap-5 overflow-x-auto whitespace-nowrap scrollbar-hide text-xs sm:text-sm font-semibold">
 
     <a
       href="tel:+918075364743"
-      className="flex items-center gap-2 hover:underline"
+      className="flex-shrink-0 flex items-center gap-1 hover:underline"
     >
-      <Phone size={15} />
-      +91 8075364743
+      <Phone size={14} />
+      <span>+91 8075364743</span>
     </a>
 
     <a
       href="mailto:info@achoos.com"
-      className="flex items-center gap-2 hover:underline"
+      className="flex-shrink-0 flex items-center gap-1 hover:underline"
     >
-      <Mail size={15} />
-      info@achoos.com
+      <Mail size={14} />
+      <span>info@achoos.com</span>
     </a>
 
-    <div className="flex items-center gap-2">
-      <MapPin size={15} />
-      Kerala, India
+    <div className="flex-shrink-0 flex items-center gap-1">
+      <MapPin size={14} />
+      <span>Kerala, India</span>
     </div>
 
   </div>
+
 </div>
 
 {/* ================= NAVBAR ================= */}
@@ -115,7 +117,7 @@ export default function Home() {
         onClick={() => setOpen(false)}
         className="flex-shrink-0 px-4 py-2 rounded-full bg-zinc-800 hover:bg-yellow-500 hover:text-black transition text-sm font-semibold"
       >
-        🏠 Home
+         Home
       </a>
 
       <a
@@ -741,52 +743,23 @@ export default function Home() {
 
 <footer className="bg-black border-t border-zinc-800">
 
-  <div className="max-w-7xl mx-auto py-10 px-4">
+  <div className="max-w-7xl mx-auto px-6 py-1">
 
-    <div className="flex flex-col items-center">
+  <div className="flex flex-col items-center space-y-3">
 
-      <img
-        src="/image/logo.png"
-        alt="Achoos"
-        className="w-36 sm:w-48"
-      />
-
-      <p className="text-zinc-400 text-center mt-5">
-        Transportation Services • Vehicle Sales • CowDung Powder
-      </p>
-
-      <div className="flex flex-wrap justify-center gap-4 mt-8">
-
-        <a href="#" className="hover:text-yellow-400 transition">
-          Home
-        </a>
-
-        <a href="#services" className="hover:text-yellow-400 transition">
-          Services
-        </a>
-
-        <a href="#sales" className="hover:text-yellow-400 transition">
-          Sales
-        </a>
-
-        <a href="#contact" className="hover:text-yellow-400 transition">
-          Contact
-        </a>
-
-      </div>
-
-      <div className="border-t border-zinc-800 w-full mt-8 pt-6">
-
-        <p className="text-center text-zinc-500 text-sm">
-          © {new Date().getFullYear()} Achoos Transportation Services & Sales.
-          All Rights Reserved.
-        </p>
-
-      </div>
-
-    </div>
-
+  <img
+    src="/image/logo.png"
+    alt="Achoos"
+    className="h-24 sm:h-28 md:h-32 w-auto"
+  />
   </div>
+
+
+      <p className="text-center text-zinc-500 text-xs sm:text-sm">
+        © {new Date().getFullYear()} Achoos Transportation Services & Sales. All Rights Reserved.
+      </p>
+<br />
+    </div>
 
 </footer>
         </main>
