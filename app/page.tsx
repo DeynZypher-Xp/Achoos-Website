@@ -212,11 +212,11 @@ const [showTransportation, setShowTransportation] = useState(false);
       </a>
 
       <a
-        href="https://wa.me/918075364743"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="flex items-center justify-center gap-2 bg-pink-700 px-8 py-4 rounded-xl font-bold hover:scale-105 transition duration-300"
-      >
+    href="https://www.instagram.com/achoos_._"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center justify-center gap-2 bg-pink-700 px-8 py-4 rounded-xl font-bold hover:scale-105 transition duration-300"
+  >
         <MessageCircle size={22} />
         Instagram
       </a>
@@ -332,9 +332,9 @@ const [showTransportation, setShowTransportation] = useState(false);
 
           <a
             href="tel:+918075364743"
-            className="mt-3 block text-center bg-green-500 text-white py-2 rounded-lg font-bold hover:bg-green-600 transition"
+            className="mt-3 block text-center bg-yellow-500 text-white py-2 rounded-lg font-bold hover:bg-yellow-600 transition"
           >
-            Enquire Now
+            Contact Now
           </a>
         </div>
       </div>
@@ -380,7 +380,7 @@ const [showTransportation, setShowTransportation] = useState(false);
 {showTransportation && (
   <div className="mt-6 grid grid-cols-2 gap-4">
 
-    {Array.from({ length: 4 }).map((_, index) => (
+    {Array.from({ length: 6 }).map((_, index) => (
       <div
         key={index}
         className="bg-zinc-800 rounded-2xl overflow-hidden border border-zinc-700"
@@ -595,7 +595,7 @@ const [showTransportation, setShowTransportation] = useState(false);
 
         <div className="absolute bottom-6 left-1/2 -translate-x-1/2">
 
-          <div className="bg-yellow-500 text-black px-3 py-1 rounded-full font-bold shadow-xl">
+          <div className="bg-yellow-500 text-black px-1 py-1 rounded-full font-bold shadow-xl">
             Open in Google Maps
           </div>
 
