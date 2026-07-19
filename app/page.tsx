@@ -45,9 +45,9 @@ const [showTransportation, setShowTransportation] = useState(false);
 
 {/* ================= NAVBAR ================= */}
 
-<nav className="sticky top-0 z-50 bg-black/80 backdrop-blur-lg border-b border-white/10">
+<nav className="sticky top-0 z-10 bg-black/60 backdrop-blur-lg border-b border-white/10">
 
-  <div className="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
+  <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
 
     {/* Logo */}
 
@@ -55,7 +55,7 @@ const [showTransportation, setShowTransportation] = useState(false);
       <img
         src="/image/logo.png"
         alt="Achoos Transportation Service"
-        className="h-14 sm:h-16 md:h-20 lg:h-24 w-auto transition duration-300"
+        className="h-20 sm:h-16 md:h-20 lg:h-24 w-auto transition duration-300"
       />
     </a>
 
@@ -595,9 +595,9 @@ const [showTransportation, setShowTransportation] = useState(false);
 
         <div className="absolute bottom-6 left-1/2 -translate-x-1/2">
 
-          <div className="bg-yellow-500 text-black px-1 py-1 rounded-full font-bold shadow-xl">
-            Open in Google Maps
-          </div>
+         <div className="bg-yellow-500 text-black px-4 py-2 rounded-full font-bold shadow-xl whitespace-nowrap">
+  Open in Google Maps
+</div>
 
         </div>
 
