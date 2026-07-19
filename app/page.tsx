@@ -5,6 +5,9 @@ import { useState } from "react";
 
 export default function Home() {
   const [open, setOpen] = useState(false);
+const [showVehicles, setShowVehicles] = useState(false);
+const [showCowDung, setShowCowDung] = useState(false);
+const [showTransportation, setShowTransportation] = useState(false);
 
   return (
     <main className="bg-black text-white">
@@ -202,11 +205,22 @@ export default function Home() {
         href="https://wa.me/918075364743"
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center justify-center gap-2 bg-green-500 px-8 py-4 rounded-xl font-bold hover:scale-105 transition duration-300"
+        className="flex items-center justify-center gap-2 bg-green-700 px-8 py-4 rounded-xl font-bold hover:scale-105 transition duration-300"
       >
         <MessageCircle size={22} />
         WhatsApp
       </a>
+
+      <a
+        href="https://wa.me/918075364743"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center justify-center gap-2 bg-pink-700 px-8 py-4 rounded-xl font-bold hover:scale-105 transition duration-300"
+      >
+        <MessageCircle size={22} />
+        Instagram
+      </a>
+
 
     </div>
 
@@ -289,9 +303,45 @@ export default function Home() {
               maintained and These kind of vehicles are available.
             </p>
 
-            <div className="mt-6 inline-flex items-center gap-2 text-yellow-400 font-semibold">
-              View Vehicles →
-            </div>
+           <button
+  onClick={() => setShowVehicles(!showVehicles)}
+  className="mt-6 inline-flex items-center gap-2 text-yellow-400 font-semibold hover:underline transition"
+>
+  {showVehicles ? "Hide Vehicles ↑" : "View Vehicles →"}
+</button>
+
+{showVehicles && (
+  <div className="mt-6 grid grid-cols-2 gap-4">
+
+    {Array.from({ length: 8 }).map((_, index) => (
+      <div
+        key={index}
+        className="bg-zinc-800 rounded-2xl overflow-hidden border border-zinc-700"
+      >
+        <img
+          src={`/image/truck${index + 1}.jpeg`}
+          alt={`Vehicle ${index + 1}`}
+          className="w-full h-32 object-cover"
+        />
+
+        <div className="p-3">
+           <p className="text-zinc-400 text-xs mt-1">
+            These kind of vehicles are available.
+          </p>
+          
+
+          <a
+            href="tel:+918075364743"
+            className="mt-3 block text-center bg-green-500 text-white py-2 rounded-lg font-bold hover:bg-green-600 transition"
+          >
+            Enquire Now
+          </a>
+        </div>
+      </div>
+    ))}
+
+  </div>
+)}
 
           </div>
 
@@ -320,9 +370,48 @@ export default function Home() {
             for commercial goods.
           </p>
 
-          <div className="mt-6 inline-flex items-center gap-2 text-yellow-400 font-semibold">
-            Learn More →
-          </div>
+         <button
+  onClick={() => setShowTransportation(!showTransportation)}
+  className="mt-6 inline-flex items-center gap-2 text-yellow-400 font-semibold hover:underline transition"
+>
+  {showTransportation ? "Hide Details ↑" : "Learn More →"}
+</button>
+
+{showTransportation && (
+  <div className="mt-6 grid grid-cols-2 gap-4">
+
+    {Array.from({ length: 4 }).map((_, index) => (
+      <div
+        key={index}
+        className="bg-zinc-800 rounded-2xl overflow-hidden border border-zinc-700"
+      >
+        <img
+          src={`/image/trans${index + 1}.jpeg`}
+          alt={`Organic CowDung ${index + 1}`}
+          className="w-full h-32 object-cover"
+        />
+
+        <div className="p-3">
+          <h4 className="font-semibold">
+            Transportation
+          </h4>
+
+          <p className="text-zinc-400 text-xs mt-1">
+            Safe, fast & reliable transportation.
+          </p>
+
+          <a
+            href="tel:+918075364743"
+            className="mt-3 block text-center bg-green-500 text-white py-2 rounded-lg font-bold hover:bg-green-600 transition"
+          >
+            Enquire Now
+          </a>
+        </div>
+      </div>
+    ))}
+
+  </div>
+)}
 
         </div>
 
@@ -344,17 +433,59 @@ export default function Home() {
             
 
             <h3 className="text-2xl font-bold text-yellow-400 mt-4">
-              CowDung Powder
-            </h3>
+  Cow Dung Powder
+  <span className="block text-lg text-yellow-400 font-medium mt-1">
+    (വളപ്പൊടി)
+  </span>
+</h3>
 
             <p className="text-zinc-400 mt-3">
               Professional transportation services for organic cow dung powder
               with safe handling and timely delivery.
             </p>
 
-            <div className="mt-6 inline-flex items-center gap-2 text-yellow-400 font-semibold">
-              Explore →
-            </div>
+            <button
+  onClick={() => setShowCowDung(!showCowDung)}
+  className="mt-6 inline-flex items-center gap-2 text-yellow-400 font-semibold hover:underline transition"
+>
+  {showCowDung ? "Hide Gallery ↑" : "Explore →"}
+</button>
+
+{showCowDung && (
+  <div className="mt-6 grid grid-cols-2 gap-4">
+
+    {Array.from({ length: 4 }).map((_, index) => (
+      <div
+        key={index}
+        className="bg-zinc-800 rounded-2xl overflow-hidden border border-zinc-700"
+      >
+        <img
+          src={`/image/cow${index + 1}.jpeg`}
+          alt={`Organic CowDung ${index + 1}`}
+          className="w-full h-32 object-cover"
+        />
+
+        <div className="p-3">
+          <h4 className="font-semibold">
+            Organic CowDung
+          </h4>
+
+          <p className="text-zinc-400 text-xs mt-1">
+            Premium Organic Product
+          </p>
+
+          <a
+            href="tel:+918075364743"
+            className="mt-3 block text-center bg-green-500 text-white py-2 rounded-lg font-bold hover:bg-green-600 transition"
+          >
+            Enquire Now
+          </a>
+        </div>
+      </div>
+    ))}
+
+  </div>
+)}
 
           </div>
 
@@ -365,8 +496,131 @@ export default function Home() {
 
   </div>
 </section>
+            {/* ================= CONTACT ================= */}
 
-     {/* ================= WHY CHOOSE US ================= */}
+<section
+  id="contact"
+  className="bg-zinc-950 py-20 sm:py-24 px-4 sm:px-6"
+>
+
+  <div className="max-w-7xl mx-auto">
+
+    <div className="text-center">
+
+      <span className="text-yellow-400 uppercase tracking-[4px] font-semibold">
+        CONTACT US
+      </span>
+
+      <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mt-4">
+        Get In Touch
+      </h2>
+
+      <p className="text-zinc-400 mt-5 max-w-2xl mx-auto">
+        Need transportation services or looking to purchase a commercial vehicle?
+        Contact us today.
+      </p>
+
+    </div>
+
+    <div className="grid lg:grid-cols-2 gap-10 mt-16">
+
+      <div className="space-y-4">
+
+  <a
+    href="tel:+918075364743"
+    className="flex items-center justify-between bg-zinc-900 border border-zinc-800 rounded-2xl px-6 py-5 hover:border-yellow-500 transition"
+  >
+    <div>
+      <h3 className="font-bold text-lg">Call Us</h3>
+      <p className="text-zinc-400 text-sm">+91 80753 64743</p>
+    </div>
+
+    <span className="text-yellow-400 text-xl">→</span>
+  </a>
+
+  <a
+    href="https://wa.me/918075364743"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center justify-between bg-zinc-900 border border-zinc-800 rounded-2xl px-6 py-5 hover:border-green-500 transition"
+  >
+    <div>
+      <h3 className="font-bold text-lg" >WhatsApp</h3>
+      <p className="text-zinc-400 text-sm">Chat with us</p>
+    </div>
+
+    <span className="text-green-400 text-xl">→</span>
+  </a>
+
+  <a
+    href="https://www.instagram.com/achoos_._"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center justify-between bg-zinc-900 border border-zinc-800 rounded-2xl px-6 py-5 hover:border-pink-500 transition"
+  >
+    <div>
+      <h3 className="font-bold text-lg">Instagram</h3>
+      <p className="text-zinc-400 text-sm">@achoos_._</p>
+    </div>
+
+    <span className="text-pink-400 text-xl">→</span>
+  </a>
+
+  <div className="bg-zinc-900 border border-zinc-800 rounded-2xl px-6 py-5">
+    <h3 className="font-bold text-lg">Address</h3>
+    <p className="text-zinc-400 text-sm mt-2">
+      Mannarkkad, Kottiyode<br />
+      Palakkad, Kerala - 678593
+    </p>
+  </div>
+
+</div>
+
+      {/* Right */}
+
+      <a
+        href="https://maps.app.goo.gl/HV36A6QYZrciZ1hJ8"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group relative rounded-3xl overflow-hidden"
+      >
+
+        <img
+          src="/image/map.png"
+          alt="Location"
+          className="w-full h-80 lg:h-full object-cover group-hover:scale-105 transition duration-500"
+        />
+
+        <div className="absolute inset-0 bg-black/20"></div>
+
+        <div className="absolute bottom-6 left-1/2 -translate-x-1/2">
+
+          <div className="bg-yellow-500 text-black px-3 py-1 rounded-full font-bold shadow-xl">
+            Open in Google Maps
+          </div>
+
+        </div>
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+{/* ================= FLOATING WHATSAPP ================= */}
+
+<a
+  href="https://wa.me/918075364743"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="fixed bottom-5 right-5 w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-green-500 hover:bg-green-600 flex items-center justify-center shadow-2xl text-2xl z-50 transition hover:scale-110"
+>
+  💬
+</a>
+
+ {/* ================= WHY CHOOSE US ================= */}
 
 <section className="bg-black py-20 sm:py-24 px-4 sm:px-6">
 
@@ -472,272 +726,6 @@ export default function Home() {
   </div>
 
 </section>
-           {/* ================= VEHICLE SALES ================= */}
-
-<section
-  id="sales"
-  className="bg-zinc-950 py-20 sm:py-24 px-4 sm:px-6"
->
-
-  <div className="max-w-7xl mx-auto">
-
-    {/* Heading */}
-
-    <div className="text-center">
-
-      <span className="text-yellow-400 uppercase tracking-[4px] font-semibold">
-        VEHICLES FOR SALE
-      </span>
-
-      <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mt-4">
-        Available Vehicles
-      </h2>
-
-      <p className="text-zinc-400 max-w-2xl mx-auto mt-5">
-        Browse our commercial vehicles. Contact us for pricing,
-        specifications and availability.
-      </p>
-
-    </div>
-
-    {/* Gallery */}
-
-    <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-5 mt-14">
-
-      {Array.from({ length: 8 }).map((_, index) => (
-
-        <div
-          key={index}
-          className="group bg-zinc-900 rounded-3xl overflow-hidden border border-zinc-800 hover:border-yellow-500 transition duration-300 hover:-translate-y-2"
-        >
-
-          <div className="overflow-hidden">
-
-            <img
-              src={`/image/truck${index + 1}.jpeg`}
-              alt={`Vehicle ${index + 1}`}
-              className="w-full h-44 sm:h-56 md:h-64 object-cover group-hover:scale-110 transition duration-500"
-            />
-
-          </div>
-
-          <div className="p-4">
-
-            <h3 className="text-lg font-bold">
-              Vehicle {index + 1}
-            </h3>
-
-            <p className="text-zinc-400 text-sm mt-2">
-              These kind of vehicles are available.
-            </p>
-
-            <a
-              href="tel:+918075364743"
-              className="mt-4 inline-flex items-center justify-center w-full bg-yellow-500 hover:bg-yellow-400 text-black py-2 rounded-xl font-bold transition"
-            >
-              Contact Now
-            </a>
-
-          </div>
-
-        </div>
-
-      ))}
-
-    </div>
-
-  </div>
-
-</section>
-      {/* ================= COWDUNG POWDER ================= */}
-
-<section
-  id="cowdung"
-  className="bg-black py-20 sm:py-24 px-4 sm:px-6"
->
-
-  <div className="max-w-7xl mx-auto">
-
-    {/* Heading */}
-
-    <div className="text-center">
-
-      <span className="text-green-400 uppercase tracking-[4px] font-semibold">
-        ORGANIC PRODUCTS
-      </span>
-
-      <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mt-4">
-        CowDung Powder
-      </h2>
-
-      <p className="text-zinc-400 max-w-2xl mx-auto mt-5">
-        We supply and transport premium-quality organic cow dung powder
-        across Kerala with reliable and timely delivery.
-      </p>
-
-    </div>
-
-    {/* Gallery */}
-
-    <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-5 mt-14">
-
-      {Array.from({ length: 4 }).map((_, index) => (
-
-        <div
-          key={index}
-          className="group bg-zinc-900 rounded-3xl overflow-hidden border border-zinc-800 hover:border-green-500 transition duration-300 hover:-translate-y-2"
-        >
-
-          <div className="overflow-hidden">
-
-            <img
-              src={`/image/cow${index + 1}.jpeg`}
-              alt={`CowDung ${index + 1}`}
-              className="w-full h-44 sm:h-56 md:h-64 object-cover group-hover:scale-110 transition duration-500"
-            />
-
-          </div>
-
-          <div className="p-4">
-
-            <h3 className="text-lg font-bold">
-              Organic CowDung
-            </h3>
-
-            <p className="text-zinc-400 text-sm mt-2">
-              Safe, eco-friendly and ready for agricultural use.
-            </p>
-
-            <a
-              href="tel:+918075364743"
-              className="mt-4 inline-flex items-center justify-center w-full bg-green-500 hover:bg-green-600 py-2 rounded-xl font-bold transition"
-            >
-              Enquire Now
-            </a>
-
-          </div>
-
-        </div>
-
-      ))}
-
-    </div>
-
-    
-
-    </div>
-
-</section>
-            {/* ================= CONTACT ================= */}
-
-<section
-  id="contact"
-  className="bg-zinc-950 py-20 sm:py-24 px-4 sm:px-6"
->
-
-  <div className="max-w-7xl mx-auto">
-
-    <div className="text-center">
-
-      <span className="text-yellow-400 uppercase tracking-[4px] font-semibold">
-        CONTACT US
-      </span>
-
-      <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mt-4">
-        Get In Touch
-      </h2>
-
-      <p className="text-zinc-400 mt-5 max-w-2xl mx-auto">
-        Need transportation services or looking to purchase a commercial vehicle?
-        Contact us today.
-      </p>
-
-    </div>
-
-    <div className="grid lg:grid-cols-2 gap-10 mt-16">
-
-      <div className="grid grid-cols-2 gap-4">
-
-  <a
-    href="tel:+918075364743"
-    className="bg-zinc-900 rounded-2xl p-5 text-center hover:bg-yellow-500 hover:text-black transition"
-  >
-    <div className="text-3xl">📞</div>
-    <h3 className="font-bold mt-3">Call</h3>
-  </a>
-
-  <a
-    href="https://wa.me/918075364743"
-    target="_blank"
-    className="bg-zinc-900 rounded-2xl p-5 text-center hover:bg-green-500 transition"
-  >
-    <div className="text-3xl">💬</div>
-    <h3 className="font-bold mt-3">WhatsApp</h3>
-  </a>
-
-  <a
-    href="https://www.instagram.com/achoos_._"
-    target="_blank"
-    className="bg-zinc-900 rounded-2xl p-5 text-center hover:bg-pink-500 transition"
-  >
-    <div className="text-3xl">📷</div>
-    <h3 className="font-bold mt-3">Instagram</h3>
-  </a>
-
-  <div className="bg-zinc-900 rounded-2xl p-5 text-center">
-    <div className="text-3xl">📍</div>
-    <h3 className="font-bold mt-3">Address</h3>
-    <p className="text-zinc-400 text-xs mt-2">
-      Mannarkkad,<br />
-      Palakkad, Kerala
-    </p>
-  </div>
-
-</div>
-
-      {/* Right */}
-
-      <a
-        href="https://maps.app.goo.gl/HV36A6QYZrciZ1hJ8"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="group relative rounded-3xl overflow-hidden"
-      >
-
-        <img
-          src="/image/map.png"
-          alt="Location"
-          className="w-full h-80 lg:h-full object-cover group-hover:scale-105 transition duration-500"
-        />
-
-        <div className="absolute inset-0 bg-black/20"></div>
-
-        <div className="absolute bottom-6 left-1/2 -translate-x-1/2">
-
-          <div className="bg-yellow-500 text-black px-6 py-3 rounded-full font-bold shadow-xl">
-            📍 Open in Google Maps
-          </div>
-
-        </div>
-
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
-
-{/* ================= FLOATING WHATSAPP ================= */}
-
-<a
-  href="https://wa.me/918075364743"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="fixed bottom-5 right-5 w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-green-500 hover:bg-green-600 flex items-center justify-center shadow-2xl text-2xl z-50 transition hover:scale-110"
->
-  💬
-</a>
 
 {/* ================= FOOTER ================= */}
 
