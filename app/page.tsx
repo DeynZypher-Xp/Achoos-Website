@@ -9,539 +9,785 @@ export default function Home() {
   return (
     <main className="bg-black text-white">
 
-      {/* TOP CONTACT BAR */}
-      <div className="bg-yellow-500 text-black">
-        <div className="max-w-7xl mx-auto px-6 py-3 flex flex-wrap justify-between items-center text-sm font-semibold">
+      {/* ================= TOP CONTACT BAR ================= */}
 
-          <a href="tel:+918075364743" className="flex items-center gap-2">
-            <Phone size={16} />
-            +91 8075364743
-          </a>
-
-          <a href="mailto:info@achoos.com" className="flex items-center gap-2">
-            <Mail size={16} />
-            info@achoos.com
-          </a>
-
-          <div className="flex items-center gap-2">
-            <MapPin size={16} />
-            Kerala, India
-          </div>
-
-        </div>
-      </div>
-
-      {/* NAVBAR */}
-      <nav className="sticky top-0 z-20 bg-black/70 backdrop-blur">
-
-        <div className="max-w-8xl mx-auto h-20 px-4 flex items-center justify-between">
-
-          <img
-  src="/image/logo.png"
-  alt="Achoos Transportation Service"
-  className="h-24 w-auto"
-/>
-
-          <div className="hidden md:flex items-center gap-4">
-
-  <a
-    href="#"
-    className="px-5 py-2 rounded-full bg-zinc-800 hover:bg-yellow-500 hover:text-black transition duration-300"
-  >
-    Home
-  </a>
-
-  <a
-    href="#services"
-    className="px-5 py-2 rounded-full bg-zinc-800 hover:bg-yellow-500 hover:text-black transition duration-300"
-  >
-    Services
-  </a>
-
-  <a
-    href="#sales"
-    className="px-5 py-2 rounded-full bg-zinc-800 hover:bg-yellow-500 hover:text-black transition duration-300"
-  >
-    Vehicles Sales
-  </a>
-
-  <a
-    href="#contact"
-    className="px-5 py-2 rounded-full bg-zinc-800 hover:bg-yellow-500 hover:text-black transition duration-300"
-  >
-    Contact
-  </a>
-
-</div>
-
-          <button
-            className="md:hidden"
-            onClick={() => setOpen(!open)}
-          >
-            <Menu />
-          </button>
-
-        </div>
-
-      {open && (
-  <div className="bg-black/90 backdrop-blur md:hidden mx-4 mt-3 px-4 py-3 rounded-2xl flex flex-row gap-3 items-center justify-center">
+<div className="bg-yellow-500 text-black">
+  <div className="max-w-7xl mx-auto px-4 py-2 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs sm:text-sm font-semibold">
 
     <a
-      href="#"
-      className="text-white text-sm px-4 py-2 rounded-full bg-zinc-800 hover:bg-yellow-500 hover:text-black transition"
+      href="tel:+918075364743"
+      className="flex items-center gap-2 hover:underline"
     >
-      Home
+      <Phone size={15} />
+      +91 8075364743
     </a>
 
     <a
-      href="#services"
-      className="text-white text-sm px-4 py-2 rounded-full bg-zinc-800 hover:bg-yellow-500 hover:text-black transition"
+      href="mailto:info@achoos.com"
+      className="flex items-center gap-2 hover:underline"
     >
-      Services
+      <Mail size={15} />
+      info@achoos.com
     </a>
 
-    <a
-      href="#sales"
-      className="text-white text-sm px-4 py-2 rounded-full bg-zinc-800 hover:bg-yellow-500 hover:text-black transition"
-    >
-      Sales
-    </a>
-
-    <a
-      href="#contact"
-      className="text-white text-sm px-4 py-2 rounded-full bg-zinc-800 hover:bg-yellow-500 hover:text-black transition"
-    >
-      Contact
-    </a>
+    <div className="flex items-center gap-2">
+      <MapPin size={15} />
+      Kerala, India
+    </div>
 
   </div>
-)}
-      </nav>
+</div>
 
-      {/* HERO */}
+{/* ================= NAVBAR ================= */}
 
-      <section
-        className="relative h-screen bg-cover bg-center flex items-center"
-        style={{
-  backgroundImage: "url('/image/hero.jpeg')",
-}}
-      >
+<nav className="sticky top-0 z-50 bg-black/80 backdrop-blur-lg border-b border-white/10">
 
-        <div className="absolute inset-0 bg-black/65"></div>
+  <div className="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
 
-        <div className="relative max-w-7xl mx-auto px-6">
+    {/* Logo */}
 
-          <span className="bg-yellow-500 text-black px-5 py-2 rounded-full font-bold">
-            Trusted Transportation Partner
-          </span>
-
-          <h1 className="text-5xl md:text-7xl font-black mt-8 leading-tight">
-
-            Reliable Transportation
-            <br />
-            & Vehicles Sales
-
-          </h1>
-
-          <p className="mt-6 text-zinc-300 max-w-xl text-lg">
-
-            Safe transportation services,
-            logistics solutions and quality
-            commercial Vehicles sales across Kerala.
-
-          </p>
-
-          <div className="flex flex-wrap gap-5 mt-10">
-
-            <a
-              href="tel:+918075364743"
-              className="flex items-center gap-2 bg-yellow-500 text-black px-8 py-4 rounded-xl font-bold hover:scale-105 transition"
-            >
-              <Phone size={22} />
-              Call Now
-            </a>
-
-            <a
-              href="https://wa.me/918075364743"
-              className="flex items-center gap-2 bg-green-500 px-8 py-4 rounded-xl font-bold hover:scale-105 transition"
-            >
-              <MessageCircle size={22} />
-              WhatsApp
-            </a>
-
-          </div>
-
-          <div className="flex flex-wrap gap-6 mt-12 text-zinc-300">
-
-            <span>🚛 Vehicles Available</span>
-            <span>⭐ Trusted Service</span>
-            <span>📍 Kerala</span>
-            <span>⏱ Fast Delivery</span>
-
-          </div>
-
-        </div>
-
-      </section>
-      {/* SERVICES */}
-
-      <section
-        id="services"
-        className="bg-zinc-950 py-24 px-6"
-      >
-        <div className="max-w-7xl mx-auto">
-
-          <h2 className="text-5xl font-black text-center">
-            Our Services
-          </h2>
-
-          <p className="text-zinc-400 text-center mt-4 max-w-2xl mx-auto">
-            We provide dependable transportation, logistics support,
-            and commercial vehicle sales with a focus on safety,
-            reliability, and customer satisfaction.
-          </p>
-
-          <div className="grid md:grid-cols-3 gap-8 mt-16">
-
-             {/* Service 1 */}
-
-             <a href="#sales">
-
-            <div className="bg-zinc-900 rounded-2xl overflow-hidden hover:scale-105 transition duration-300">
-
-              <img
-                src="/image/truck1.jpeg"
-                alt="Vehicles Sales"
-                className="w-full h-60 object-cover"
-              />
-
-              <div className="p-6">
-
-                <h3 className="text-2xl font-bold text-yellow-400">
-                  Vehicle Sales
-                </h3>
-
-                <p className="text-zinc-400 mt-3">
-                  Buy quality commercial Vehicles that are ready for
-                  immediate use.
-                </p>
-
-              </div>
-
-            </div>
-            </a>
-
-           
-
-            {/* Service 3 */}
-            <a href="#cowdung">
-
-            <div className="bg-zinc-900 rounded-2xl overflow-hidden hover:scale-105 transition duration-300">
-
-              <img
-                src="/image/valapodi.jpeg"
-                alt="Logistics"
-                className="w-full h-60 object-cover"
-              />
-
-              <div className="p-6">
-
-                <h3 className="text-2xl font-bold text-yellow-400">
-                  CowDung Service
-                </h3>
-
-                <p className="text-zinc-400 mt-3">
-                  We provide safe, reliable, and timely transportation services for cow dung powder.
-                </p>
-
-              </div>
-
-            </div>
-          </a>
-           {/* Service 2 */}
-
-            <div className="bg-zinc-900 rounded-2xl overflow-hidden hover:scale-105 transition duration-300">
-
-              <img
-                src="/image/service5.jpeg"
-                alt="Transportation"
-                className="w-full h-60 object-cover"
-              />
-
-              <div className="p-6">
-
-                <h3 className="text-2xl font-bold text-yellow-400">
-                  Transportation
-                </h3>
-
-                <p className="text-zinc-400 mt-3">
-                  Safe and timely transportation services for goods
-                  across Kerala.
-                </p>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-      </section>
-
-      {/* WHY CHOOSE US */}
-
-      <section className="py-24 px-6">
-
-        <div className="max-w-7xl mx-auto">
-
-          <h2 className="text-5xl font-black text-center">
-            Why Choose Achoos?
-          </h2>
-
-          <div className="grid md:grid-cols-4 gap-8 mt-16">
-
-            <div className="bg-zinc-900 rounded-xl p-8 text-center">
-              <h3 className="text-5xl">🚛</h3>
-              <h4 className="mt-5 text-2xl font-bold">
-                Modern Fleet
-              </h4>
-              <p className="text-zinc-400 mt-3">
-                Well-maintained Vehicles for reliable transportation.
-              </p>
-            </div>
-
-            <div className="bg-zinc-900 rounded-xl p-8 text-center">
-              <h3 className="text-5xl">⭐</h3>
-              <h4 className="mt-5 text-2xl font-bold">
-                Trusted Service
-              </h4>
-              <p className="text-zinc-400 mt-3">
-                Committed to customer satisfaction and timely delivery.
-              </p>
-            </div>
-
-            <div className="bg-zinc-900 rounded-xl p-8 text-center">
-              <h3 className="text-5xl">🛡️</h3>
-              <h4 className="mt-5 text-2xl font-bold">
-                Safe Delivery
-              </h4>
-              <p className="text-zinc-400 mt-3">
-                Secure handling of goods with experienced drivers.
-              </p>
-            </div>
-
-            <div className="bg-zinc-900 rounded-xl p-8 text-center">
-              <h3 className="text-5xl">📞</h3>
-              <h4 className="mt-5 text-2xl font-bold">
-                24/7 Support
-              </h4>
-              <p className="text-zinc-400 mt-3">
-                Contact us anytime through phone or WhatsApp.
-              </p>
-            </div>
-
-          </div>
-
-        </div>
-
-      </section>
-            {/* Vehicles SALES */}
-
-      <section id="sales" className="bg-zinc-950 py-24 px-6">
-
-        <div className="max-w-7xl mx-auto">
-
-          <h2 className="text-5xl font-black text-center">
-            Vehicles For Sale
-          </h2>
-
-          <p className="text-zinc-400 text-center mt-4 max-w-2xl mx-auto">
-            Browse our available Vehicles. Contact us directly for pricing,
-            specifications, and availability.
-          </p>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-16">
-
-  {Array.from({ length: 8 }).map((_, index) => (
-    <div
-      key={index}
-      className="overflow-hidden rounded-2xl shadow-lg hover:scale-105 transition duration-300"
-    >
+    <a href="#">
       <img
-        src={`/image/truck${index + 1}.jpeg`}
-        alt={`Vehicles ${index + 1}`}
-        className="w-full h-72 object-cover"
+        src="/image/logo.png"
+        alt="Achoos Transportation Service"
+        className="h-14 sm:h-16 md:h-20 lg:h-24 w-auto transition duration-300"
       />
+    </a>
+
+    {/* Desktop Menu */}
+
+    <div className="hidden md:flex items-center gap-4">
+
+      <a
+        href="#"
+        className="px-5 py-2 rounded-full bg-zinc-800 hover:bg-yellow-500 hover:text-black transition"
+      >
+        Home
+      </a>
+
+      <a
+        href="#services"
+        className="px-5 py-2 rounded-full bg-zinc-800 hover:bg-yellow-500 hover:text-black transition"
+      >
+        Services
+      </a>
+
+      <a
+        href="#sales"
+        className="px-5 py-2 rounded-full bg-zinc-800 hover:bg-yellow-500 hover:text-black transition"
+      >
+        Vehicle Sales
+      </a>
+
+      <a
+        href="#contact"
+        className="px-5 py-2 rounded-full bg-yellow-500 text-black font-bold hover:scale-105 transition"
+      >
+        Contact
+      </a>
+
     </div>
-  ))}
 
-</div>
+    {/* Mobile Menu Button */}
 
-        </div>
-
-      </section>
-
-       {/* Cowdung Powder */}
-
-      <section id="cowdung" className="bg-zinc-950 py-24 px-6">
-
-        <div className="max-w-7xl mx-auto">
-
-          <h2 className="text-5xl font-black text-center">
-            CowDung Powder
-          </h2>
-
-          <p className="text-zinc-400 text-center mt-4 max-w-2xl mx-auto">
-            We provide safe, reliable, and timely transportation services for organic cow dung powder across Kerala.
-          </p>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-16">
-
-  {Array.from({ length: 4 }).map((_, index) => (
-    <div
-      key={index}
-      className="overflow-hidden rounded-2xl shadow-lg hover:scale-105 transition duration-300"
+    <button
+      onClick={() => setOpen(!open)}
+      className="md:hidden bg-zinc-900 p-3 rounded-xl hover:bg-yellow-500 hover:text-black transition"
     >
-      <img
-        src={`/image/cow${index + 1}.jpeg`}
-        alt={`cow ${index + 1}`}
-        className="w-full h-72 object-cover"
-      />
-    </div>
-  ))}
+      <Menu size={24} />
+    </button>
 
-</div>
+  </div>
 
-        </div>
+  {/* ================= MOBILE MENU ================= */}
 
-      </section>
-            {/* CONTACT */}
+<div
+  className={`md:hidden overflow-hidden transition-all duration-300 ${
+    open ? "max-h-40 opacity-100" : "max-h-0 opacity-0"
+  }`}
+>
+  <div className="mx-3 mt-2 mb-3 rounded-2xl bg-zinc-900/95 backdrop-blur-lg border border-zinc-800 p-3">
 
-      <section id="contact" className="py-24 px-6 bg-black">
+    <div className="flex items-center gap-2 overflow-x-auto whitespace-nowrap scrollbar-hide">
 
-        <div className="max-w-7xl mx-auto">
+      <a
+        href="#"
+        onClick={() => setOpen(false)}
+        className="flex-shrink-0 px-4 py-2 rounded-full bg-zinc-800 hover:bg-yellow-500 hover:text-black transition text-sm font-semibold"
+      >
+        🏠 Home
+      </a>
 
-          <h2 className="text-5xl font-black text-center">
-            Contact Achoos
-          </h2>
+      <a
+        href="#services"
+        onClick={() => setOpen(false)}
+        className="flex-shrink-0 px-4 py-2 rounded-full bg-zinc-800 hover:bg-yellow-500 hover:text-black transition text-sm font-semibold"
+      >
+        Services
+      </a>
 
-          <p className="text-zinc-400 text-center mt-4">
-            Contact us today for transportation services or Vehicle sales.
-          </p>
+      <a
+        href="#sales"
+        onClick={() => setOpen(false)}
+        className="flex-shrink-0 px-4 py-2 rounded-full bg-zinc-800 hover:bg-yellow-500 hover:text-black transition text-sm font-semibold"
+      >
+        Sales
+      </a>
 
-          <div className="grid md:grid-cols-2 gap-12 mt-16">
+     
 
-            {/* Contact Details */}
+      <a
+        href="#contact"
+        onClick={() => setOpen(false)}
+        className="flex-shrink-0 px-4 py-2 rounded-full bg-yellow-500 text-black hover:bg-yellow-400 transition text-sm font-bold"
+      >
+       📞Contact
+      </a>
 
-            <div className="space-y-6">
-
-              <div className="bg-zinc-900 rounded-2xl p-6">
-                <h3 className="text-yellow-400 text-xl font-bold">📞 Phone</h3>
-                <a
-                  href="tel:+918075364743"
-                  className="text-2xl font-semibold hover:text-yellow-400"
-                >
-                  +91 8075364743
-                </a>
-              </div>
-
-              <div className="bg-zinc-900 rounded-2xl p-6">
-                <h3 className="text-green-400 text-xl font-bold">💬 WhatsApp</h3>
-                <a
-                  href="https://wa.me/918075364743"
-                  target="_blank"
-                  className="text-2xl font-semibold hover:text-green-400"
-                >
-                  Chat on WhatsApp
-                </a>
-              </div>
-
-              <div className="bg-zinc-900 rounded-2xl p-6">
-                <h3 className="text-blue-400 text-xl font-bold">✉️ Instagram</h3>
-                <a
-                  href="https://www.instagram.com/achoos_._?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-                  className="text-2xl font-semibold hover:text-blue-400"
-                >
-                  Chat On Instagram
-                </a>
-              </div>
-
-              <div className="bg-zinc-900 rounded-2xl p-6">
-                <h3 className="text-red-400 text-xl font-bold">📍 Address</h3>
-                <p className="text-zinc-300 mt-2">
-                  Achoos Transportation Services<br />
-                  +91 8075364743 <br />
-                  Kottiyode, Mannarkkad, Palakkad, Kerala <br />
-                  678593
-                </p>
-              </div>
-
-            </div>
-
-            {/* Google Maps */}
-
-           <div className="relative rounded-2xl overflow-hidden shadow-xl">
-
-  <a
-    href="https://maps.app.goo.gl/HV36A6QYZrciZ1hJ8"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <img
-      src="/image/map.png"
-      alt="Achoos Location"
-      className="w-full h-[575px] object-cover hover:scale-105 transition duration-500"
-    />
-
-    <div className="absolute inset-0 bg-black/20 hover:bg-black/10 transition"></div>
-
-    <div className="absolute bottom-6 left-1/2 -translate-x-1/2">
-      <div className="bg-yellow-600 hover:bg-yellow-700 px-6 py-3 rounded-xl text-white font-bold shadow-lg">
-        📍 Open in Google Maps
-      </div>
+      
     </div>
 
-  </a>
-
+  </div>
 </div>
-          </div>
 
-        </div>
+</nav>
 
-      </section>
+      {/* ================= HERO ================= */}
 
+<section
+  className="relative min-h-screen bg-cover bg-center flex items-center"
+  style={{
+    backgroundImage: "url('/image/hero.jpeg')",
+  }}
+>
+  {/* Overlay */}
+  <div className="absolute inset-0 bg-black/70"></div>
 
-      {/* FLOATING WHATSAPP */}
+  <div className="relative max-w-7xl mx-auto px-6 py-24">
+
+    {/* Badge */}
+    <span className="inline-block bg-yellow-500 text-black px-4 py-2 rounded-full text-sm sm:text-base font-bold shadow-lg">
+      🚛 Trusted Transportation Partner
+    </span>
+
+    {/* Heading */}
+    <h1 className="mt-6 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-tight">
+      Reliable
+      <span className="text-yellow-400"> Transportation</span>
+      <br />
+      & Vehicle Sales
+    </h1>
+
+    {/* Description */}
+    <p className="mt-6 max-w-2xl text-zinc-300 text-base sm:text-lg leading-8">
+      We provide dependable transportation services, commercial vehicle
+      sales and logistics solutions across Kerala with safety, reliability
+      and customer satisfaction as our priority.
+    </p>
+
+    {/* Buttons */}
+    <div className="mt-10 flex flex-col sm:flex-row gap-4">
+
+      <a
+        href="tel:+918075364743"
+        className="flex items-center justify-center gap-2 bg-yellow-500 text-black px-8 py-4 rounded-xl font-bold hover:scale-105 transition duration-300"
+      >
+        <Phone size={22} />
+        Call Now
+      </a>
 
       <a
         href="https://wa.me/918075364743"
         target="_blank"
-        className="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white rounded-full w-16 h-16 flex items-center justify-center text-3xl shadow-2xl z-50"
+        rel="noopener noreferrer"
+        className="flex items-center justify-center gap-2 bg-green-500 px-8 py-4 rounded-xl font-bold hover:scale-105 transition duration-300"
       >
-        💬
+        <MessageCircle size={22} />
+        WhatsApp
       </a>
 
-      {/* FOOTER */}
+    </div>
 
-      <footer className="bg-zinc-950 border-t border-zinc-800">
-  <div className="max-w-7xl mx-auto py-4 px-6 text-center">
+    {/* Stats */}
+    <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-14">
 
-    <img
-      src="/image/logo.png"
-      alt="Achoos Transportation Service"
-      className="w-52 h-auto mx-auto"
-    />
+      <div className="bg-white/10 backdrop-blur rounded-xl p-4 text-center">
+        <h3 className="text-2xl font-bold text-yellow-400">100+</h3>
+        <p className="text-sm text-zinc-300 mt-1">Happy Clients</p>
+      </div>
 
-    <p className="text-zinc-400 mt-0">
-      Transportation Services • Vehicle Sales • Valapodi Service
-    </p>
+      <div className="bg-white/10 backdrop-blur rounded-xl p-4 text-center">
+        <h3 className="text-2xl font-bold text-yellow-400">24/7</h3>
+        <p className="text-sm text-zinc-300 mt-1">Support</p>
+      </div>
 
-    <p className="text-zinc-600 mt-3 text-sm">
-      © {new Date().getFullYear()} Achoos Transportation Services.
-      All Rights Reserved.
-    </p>
+      <div className="bg-white/10 backdrop-blur rounded-xl p-4 text-center">
+        <h3 className="text-2xl font-bold text-yellow-400">Safe</h3>
+        <p className="text-sm text-zinc-300 mt-1">Transportation</p>
+      </div>
+
+      <div className="bg-white/10 backdrop-blur rounded-xl p-4 text-center">
+        <h3 className="text-2xl font-bold text-yellow-400">Kerala</h3>
+        <p className="text-sm text-zinc-300 mt-1">Service Area</p>
+      </div>
+
+    </div>
 
   </div>
+</section>
+      {/* ================= SERVICES ================= */}
+
+<section
+  id="services"
+  className="bg-zinc-950 py-20 sm:py-24 px-4 sm:px-6"
+>
+  <div className="max-w-7xl mx-auto">
+
+    {/* Heading */}
+
+    <div className="text-center">
+      <span className="text-yellow-400 font-semibold uppercase tracking-widest">
+        What We Offer
+      </span>
+
+      <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mt-3">
+        Our Services
+      </h2>
+
+      <p className="text-zinc-400 max-w-2xl mx-auto mt-5 text-sm sm:text-base">
+        We provide reliable transportation services, commercial vehicle
+        sales, and organic cow dung powder transportation across Kerala.
+      </p>
+    </div>
+
+    {/* Cards */}
+
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-14">
+
+      {/* Vehicle Sales */}
+
+      <a href="#sales">
+        <div className="group bg-zinc-900 rounded-3xl overflow-hidden border border-zinc-800 hover:border-yellow-500 transition duration-300 hover:-translate-y-2">
+
+          <img
+            src="/image/truck1.jpeg"
+            alt="Vehicle Sales"
+            className="w-full h-56 object-cover group-hover:scale-110 transition duration-500"
+          />
+
+          <div className="p-6">
+
+
+            <h3 className="text-2xl font-bold text-yellow-400 mt-4">
+              Vehicle Sales
+            </h3>
+
+            <p className="text-zinc-400 mt-3">
+              Browse quality commercial vehicles that are inspected,
+              maintained and These kind of vehicles are available.
+            </p>
+
+            <div className="mt-6 inline-flex items-center gap-2 text-yellow-400 font-semibold">
+              View Vehicles →
+            </div>
+
+          </div>
+
+        </div>
+      </a>
+
+      {/* Transportation */}
+
+      <div className="group bg-zinc-900 rounded-3xl overflow-hidden border border-zinc-800 hover:border-yellow-500 transition duration-300 hover:-translate-y-2">
+
+        <img
+          src="/image/service5.jpeg"
+          alt="Transportation"
+          className="w-full h-56 object-cover group-hover:scale-110 transition duration-500"
+        />
+
+        <div className="p-6">
+
+
+          <h3 className="text-2xl font-bold text-yellow-400 mt-4">
+            Transportation
+          </h3>
+
+          <p className="text-zinc-400 mt-3">
+            Safe, reliable and on-time transportation services across Kerala
+            for commercial goods.
+          </p>
+
+          <div className="mt-6 inline-flex items-center gap-2 text-yellow-400 font-semibold">
+            Learn More →
+          </div>
+
+        </div>
+
+      </div>
+
+      {/* CowDung */}
+
+      <a href="#cowdung">
+        <div className="group bg-zinc-900 rounded-3xl overflow-hidden border border-zinc-800 hover:border-yellow-500 transition duration-300 hover:-translate-y-2">
+
+          <img
+            src="/image/valapodi.jpeg"
+            alt="CowDung Powder"
+            className="w-full h-56 object-cover group-hover:scale-110 transition duration-500"
+          />
+
+          <div className="p-6">
+
+            
+
+            <h3 className="text-2xl font-bold text-yellow-400 mt-4">
+              CowDung Powder
+            </h3>
+
+            <p className="text-zinc-400 mt-3">
+              Professional transportation services for organic cow dung powder
+              with safe handling and timely delivery.
+            </p>
+
+            <div className="mt-6 inline-flex items-center gap-2 text-yellow-400 font-semibold">
+              Explore →
+            </div>
+
+          </div>
+
+        </div>
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+     {/* ================= WHY CHOOSE US ================= */}
+
+<section className="bg-black py-20 sm:py-24 px-4 sm:px-6">
+
+  <div className="max-w-7xl mx-auto">
+
+    {/* Heading */}
+
+    <div className="text-center">
+
+      <span className="text-yellow-400 uppercase tracking-[4px] font-semibold">
+        WHY CHOOSE US
+      </span>
+
+      <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mt-4">
+        Why Choose Achoos?
+      </h2>
+
+      <p className="text-zinc-400 max-w-2xl mx-auto mt-5">
+        We are committed to delivering reliable transportation,
+        quality vehicles, and exceptional customer support across Kerala.
+      </p>
+
+    </div>
+
+    {/* Features */}
+
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
+
+      {/* Card 1 */}
+
+      <div className="group bg-zinc-900 rounded-3xl p-8 border border-zinc-800 hover:border-yellow-500 hover:-translate-y-2 transition duration-300 text-center">
+
+        <div className="text-6xl mb-6 transition group-hover:scale-110">
+          🚛
+        </div>
+
+        <h3 className="text-2xl font-bold">
+          Modern Fleet
+        </h3>
+
+        <p className="text-zinc-400 mt-4">
+          Clean, reliable and well-maintained commercial vehicles.
+        </p>
+
+      </div>
+
+      {/* Card 2 */}
+
+      <div className="group bg-zinc-900 rounded-3xl p-8 border border-zinc-800 hover:border-yellow-500 hover:-translate-y-2 transition duration-300 text-center">
+
+        <div className="text-6xl mb-6 transition group-hover:scale-110">
+          ⭐
+        </div>
+
+        <h3 className="text-2xl font-bold">
+          Trusted Service
+        </h3>
+
+        <p className="text-zinc-400 mt-4">
+          Hundreds of satisfied customers trust our transportation services.
+        </p>
+
+      </div>
+
+      {/* Card 3 */}
+
+      <div className="group bg-zinc-900 rounded-3xl p-8 border border-zinc-800 hover:border-yellow-500 hover:-translate-y-2 transition duration-300 text-center">
+
+        <div className="text-6xl mb-6 transition group-hover:scale-110">
+          🛡️
+        </div>
+
+        <h3 className="text-2xl font-bold">
+          Safe Delivery
+        </h3>
+
+        <p className="text-zinc-400 mt-4">
+          Secure transportation with experienced drivers and careful handling.
+        </p>
+
+      </div>
+
+      {/* Card 4 */}
+
+      <div className="group bg-zinc-900 rounded-3xl p-8 border border-zinc-800 hover:border-yellow-500 hover:-translate-y-2 transition duration-300 text-center">
+
+        <div className="text-6xl mb-6 transition group-hover:scale-110">
+          📞
+        </div>
+
+        <h3 className="text-2xl font-bold">
+          24/7 Support
+        </h3>
+
+        <p className="text-zinc-400 mt-4">
+          Call or WhatsApp us anytime for quick assistance.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+           {/* ================= VEHICLE SALES ================= */}
+
+<section
+  id="sales"
+  className="bg-zinc-950 py-20 sm:py-24 px-4 sm:px-6"
+>
+
+  <div className="max-w-7xl mx-auto">
+
+    {/* Heading */}
+
+    <div className="text-center">
+
+      <span className="text-yellow-400 uppercase tracking-[4px] font-semibold">
+        VEHICLES FOR SALE
+      </span>
+
+      <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mt-4">
+        Available Vehicles
+      </h2>
+
+      <p className="text-zinc-400 max-w-2xl mx-auto mt-5">
+        Browse our commercial vehicles. Contact us for pricing,
+        specifications and availability.
+      </p>
+
+    </div>
+
+    {/* Gallery */}
+
+    <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-5 mt-14">
+
+      {Array.from({ length: 8 }).map((_, index) => (
+
+        <div
+          key={index}
+          className="group bg-zinc-900 rounded-3xl overflow-hidden border border-zinc-800 hover:border-yellow-500 transition duration-300 hover:-translate-y-2"
+        >
+
+          <div className="overflow-hidden">
+
+            <img
+              src={`/image/truck${index + 1}.jpeg`}
+              alt={`Vehicle ${index + 1}`}
+              className="w-full h-44 sm:h-56 md:h-64 object-cover group-hover:scale-110 transition duration-500"
+            />
+
+          </div>
+
+          <div className="p-4">
+
+            <h3 className="text-lg font-bold">
+              Vehicle {index + 1}
+            </h3>
+
+            <p className="text-zinc-400 text-sm mt-2">
+              These kind of vehicles are available.
+            </p>
+
+            <a
+              href="tel:+918075364743"
+              className="mt-4 inline-flex items-center justify-center w-full bg-yellow-500 hover:bg-yellow-400 text-black py-2 rounded-xl font-bold transition"
+            >
+              Contact Now
+            </a>
+
+          </div>
+
+        </div>
+
+      ))}
+
+    </div>
+
+  </div>
+
+</section>
+      {/* ================= COWDUNG POWDER ================= */}
+
+<section
+  id="cowdung"
+  className="bg-black py-20 sm:py-24 px-4 sm:px-6"
+>
+
+  <div className="max-w-7xl mx-auto">
+
+    {/* Heading */}
+
+    <div className="text-center">
+
+      <span className="text-green-400 uppercase tracking-[4px] font-semibold">
+        ORGANIC PRODUCTS
+      </span>
+
+      <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mt-4">
+        CowDung Powder
+      </h2>
+
+      <p className="text-zinc-400 max-w-2xl mx-auto mt-5">
+        We supply and transport premium-quality organic cow dung powder
+        across Kerala with reliable and timely delivery.
+      </p>
+
+    </div>
+
+    {/* Gallery */}
+
+    <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-5 mt-14">
+
+      {Array.from({ length: 4 }).map((_, index) => (
+
+        <div
+          key={index}
+          className="group bg-zinc-900 rounded-3xl overflow-hidden border border-zinc-800 hover:border-green-500 transition duration-300 hover:-translate-y-2"
+        >
+
+          <div className="overflow-hidden">
+
+            <img
+              src={`/image/cow${index + 1}.jpeg`}
+              alt={`CowDung ${index + 1}`}
+              className="w-full h-44 sm:h-56 md:h-64 object-cover group-hover:scale-110 transition duration-500"
+            />
+
+          </div>
+
+          <div className="p-4">
+
+            <h3 className="text-lg font-bold">
+              Organic CowDung
+            </h3>
+
+            <p className="text-zinc-400 text-sm mt-2">
+              Safe, eco-friendly and ready for agricultural use.
+            </p>
+
+            <a
+              href="tel:+918075364743"
+              className="mt-4 inline-flex items-center justify-center w-full bg-green-500 hover:bg-green-600 py-2 rounded-xl font-bold transition"
+            >
+              Enquire Now
+            </a>
+
+          </div>
+
+        </div>
+
+      ))}
+
+    </div>
+
+    
+
+    </div>
+
+</section>
+            {/* ================= CONTACT ================= */}
+
+<section
+  id="contact"
+  className="bg-zinc-950 py-20 sm:py-24 px-4 sm:px-6"
+>
+
+  <div className="max-w-7xl mx-auto">
+
+    <div className="text-center">
+
+      <span className="text-yellow-400 uppercase tracking-[4px] font-semibold">
+        CONTACT US
+      </span>
+
+      <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mt-4">
+        Get In Touch
+      </h2>
+
+      <p className="text-zinc-400 mt-5 max-w-2xl mx-auto">
+        Need transportation services or looking to purchase a commercial vehicle?
+        Contact us today.
+      </p>
+
+    </div>
+
+    <div className="grid lg:grid-cols-2 gap-10 mt-16">
+
+      <div className="grid grid-cols-2 gap-4">
+
+  <a
+    href="tel:+918075364743"
+    className="bg-zinc-900 rounded-2xl p-5 text-center hover:bg-yellow-500 hover:text-black transition"
+  >
+    <div className="text-3xl">📞</div>
+    <h3 className="font-bold mt-3">Call</h3>
+  </a>
+
+  <a
+    href="https://wa.me/918075364743"
+    target="_blank"
+    className="bg-zinc-900 rounded-2xl p-5 text-center hover:bg-green-500 transition"
+  >
+    <div className="text-3xl">💬</div>
+    <h3 className="font-bold mt-3">WhatsApp</h3>
+  </a>
+
+  <a
+    href="https://www.instagram.com/achoos_._"
+    target="_blank"
+    className="bg-zinc-900 rounded-2xl p-5 text-center hover:bg-pink-500 transition"
+  >
+    <div className="text-3xl">📷</div>
+    <h3 className="font-bold mt-3">Instagram</h3>
+  </a>
+
+  <div className="bg-zinc-900 rounded-2xl p-5 text-center">
+    <div className="text-3xl">📍</div>
+    <h3 className="font-bold mt-3">Address</h3>
+    <p className="text-zinc-400 text-xs mt-2">
+      Mannarkkad,<br />
+      Palakkad, Kerala
+    </p>
+  </div>
+
+</div>
+
+      {/* Right */}
+
+      <a
+        href="https://maps.app.goo.gl/HV36A6QYZrciZ1hJ8"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group relative rounded-3xl overflow-hidden"
+      >
+
+        <img
+          src="/image/map.png"
+          alt="Location"
+          className="w-full h-80 lg:h-full object-cover group-hover:scale-105 transition duration-500"
+        />
+
+        <div className="absolute inset-0 bg-black/20"></div>
+
+        <div className="absolute bottom-6 left-1/2 -translate-x-1/2">
+
+          <div className="bg-yellow-500 text-black px-6 py-3 rounded-full font-bold shadow-xl">
+            📍 Open in Google Maps
+          </div>
+
+        </div>
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+{/* ================= FLOATING WHATSAPP ================= */}
+
+<a
+  href="https://wa.me/918075364743"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="fixed bottom-5 right-5 w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-green-500 hover:bg-green-600 flex items-center justify-center shadow-2xl text-2xl z-50 transition hover:scale-110"
+>
+  💬
+</a>
+
+{/* ================= FOOTER ================= */}
+
+<footer className="bg-black border-t border-zinc-800">
+
+  <div className="max-w-7xl mx-auto py-10 px-4">
+
+    <div className="flex flex-col items-center">
+
+      <img
+        src="/image/logo.png"
+        alt="Achoos"
+        className="w-36 sm:w-48"
+      />
+
+      <p className="text-zinc-400 text-center mt-5">
+        Transportation Services • Vehicle Sales • CowDung Powder
+      </p>
+
+      <div className="flex flex-wrap justify-center gap-4 mt-8">
+
+        <a href="#" className="hover:text-yellow-400 transition">
+          Home
+        </a>
+
+        <a href="#services" className="hover:text-yellow-400 transition">
+          Services
+        </a>
+
+        <a href="#sales" className="hover:text-yellow-400 transition">
+          Sales
+        </a>
+
+        <a href="#contact" className="hover:text-yellow-400 transition">
+          Contact
+        </a>
+
+      </div>
+
+      <div className="border-t border-zinc-800 w-full mt-8 pt-6">
+
+        <p className="text-center text-zinc-500 text-sm">
+          © {new Date().getFullYear()} Achoos Transportation Services & Sales.
+          All Rights Reserved.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
 </footer>
         </main>
   );
