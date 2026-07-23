@@ -282,7 +282,6 @@ const [showTransportation, setShowTransportation] = useState(false);
 
       {/* Vehicle Sales */}
 
-      <a href="#sales">
         <div className="group bg-zinc-900 rounded-3xl overflow-hidden border border-zinc-800 hover:border-yellow-500 transition duration-300 hover:-translate-y-2">
 
           <img
@@ -346,7 +345,6 @@ const [showTransportation, setShowTransportation] = useState(false);
           </div>
 
         </div>
-      </a>
 
       {/* Transportation */}
 
