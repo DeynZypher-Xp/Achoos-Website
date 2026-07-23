@@ -10,7 +10,7 @@ const [showCowDung, setShowCowDung] = useState(false);
 const [showTransportation, setShowTransportation] = useState(false);
 
   return (
-    <main className="bg-black text-white">
+    <main className="bg-black text-white">  
 
      {/* ================= TOP CONTACT BAR ================= */}
 
@@ -81,7 +81,7 @@ const [showTransportation, setShowTransportation] = useState(false);
         href="#sales"
         className="px-5 py-2 rounded-full bg-zinc-800 hover:bg-yellow-500 hover:text-black transition"
       >
-        Vehicle Sales
+        Location
       </a>
 
       <a
@@ -136,7 +136,7 @@ const [showTransportation, setShowTransportation] = useState(false);
         onClick={() => setOpen(false)}
         className="flex-shrink-0 px-4 py-2 rounded-full bg-zinc-800 hover:bg-yellow-500 hover:text-black transition text-sm font-semibold"
       >
-        Sales
+        Location
       </a>
 
      
@@ -579,6 +579,7 @@ const [showTransportation, setShowTransportation] = useState(false);
       {/* Right */}
 
       <a
+      id="sales"
         href="https://maps.app.goo.gl/HV36A6QYZrciZ1hJ8"
         target="_blank"
         rel="noopener noreferrer"
